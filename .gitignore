@@ -1,0 +1,42 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+Course-Management-Frontend/dist
+Course-Management-Frontend/tmp
+Course-Management-Frontend/out-tsc
+Course-Management-Frontend/bazel-out
+
+# Node
+Course-Management-Frontend/node_modules
+Course-Management-Frontend/npm-debug.log
+Course-Management-Frontend/yarn-error.log
+
+# IDEs and editors
+Course-Management-Frontend/.idea/
+Course-Management-Frontend/.project
+Course-Management-Frontend/.classpath
+Course-Management-Frontend/.c9/
+Course-Management-Frontend/*.launch
+Course-Management-Frontend/.settings/
+Course-Management-Frontend/*.sublime-workspace
+
+# Visual Studio Code
+Course-Management-Frontend/.vscode/*
+Course-Management-Frontend/!.vscode/settings.json
+Course-Management-Frontend/!.vscode/tasks.json
+Course-Management-Frontend/!.vscode/launch.json
+Course-Management-Frontend/!.vscode/extensions.json
+Course-Management-Frontend/.history/*
+
+# Miscellaneous
+Course-Management-Frontend/.angular/cache
+Course-Management-Frontend/.sass-cache/
+Course-Management-Frontend/connect.lock
+Course-Management-Frontend/coverage
+Course-Management-Frontend/libpeerconnection.log
+Course-Management-Frontend/testem.log
+Course-Management-Frontend/typings
+
+# System files
+Course-Management-Frontend/.DS_Store
+Course-Management-Frontend/Thumbs.db
