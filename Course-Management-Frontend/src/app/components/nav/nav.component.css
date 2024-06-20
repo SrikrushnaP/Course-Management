@@ -1,0 +1,8 @@
+.nav-link.active {
+  border-bottom: 4px solid rgb(52, 36, 197);
+}
+
+.nav-link:hover {
+  border-bottom: 4px solid rgb(52, 36, 197);
+}
+
