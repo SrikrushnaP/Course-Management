@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { NavComponent } from "./components/nav/nav.component";
 @Component({
     selector: 'app-root',
@@ -12,5 +11,4 @@ import { NavComponent } from "./components/nav/nav.component";
 })
 export class AppComponent {
   title = 'Course-Management-Frontend';
-  faCoffee = faCoffee;
 }
