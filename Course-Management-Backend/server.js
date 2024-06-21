@@ -13,6 +13,28 @@ app.use(cors())
 app.use(express.json())
 app.use(morgan("common"))
 
+app.get('/', function (req, res) {
+    res.send("Hello from server");
+});
+
+app.get('/html-text', function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.end('' +
+    `<html>
+    <head></head>
+    <body>
+    <h2>Welcome to the MEAN stack course</h2>
+      <script>
+        /********** Browser start ********/
+        /* This code is run in the browser */
+        console.log('print in browser console ');
+        /********** Browser end ********/
+      </script>
+    </body>
+    </html>`
+  )
+});
+
 //Invalid Route Error Handler
 app.use(notFound);
 
