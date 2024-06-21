@@ -40,3 +40,7 @@ Course-Management-Frontend/typings
 # System files
 Course-Management-Frontend/.DS_Store
 Course-Management-Frontend/Thumbs.db
+
+#Backend file / NodeJS
+Course-Management-Backend/.env
+Course-Management-Backend/node_modules
