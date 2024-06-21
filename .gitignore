@@ -7,11 +7,12 @@ Course-Management-Frontend/out-tsc
 Course-Management-Frontend/bazel-out
 
 # Node
-Course-Management-Frontend/node_modules
+node_modules
 Course-Management-Frontend/npm-debug.log
 Course-Management-Frontend/yarn-error.log
 
 # IDEs and editors
+Course-Management-Frontend/.editorconfig
 Course-Management-Frontend/.idea/
 Course-Management-Frontend/.project
 Course-Management-Frontend/.classpath
@@ -42,5 +43,5 @@ Course-Management-Frontend/.DS_Store
 Course-Management-Frontend/Thumbs.db
 
 #Backend file / NodeJS
-Course-Management-Backend/.env
-Course-Management-Backend/node_modules
+.env
+node_modules
