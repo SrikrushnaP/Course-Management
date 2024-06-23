@@ -8,6 +8,7 @@ const notFound = require('./middlewares/notFound')
 const serverError = require('./middlewares/serverError')
 const app = express()
 const api = require('./routes/userRoutes')
+const courseRoutes = require('./routes/courseRoutes')
 
 // Setting up the port
 const PORT = process.env.PORT || 5000
@@ -49,6 +50,7 @@ app.get('/html-text', function (req, res) {
 
 //configure api from api route
 app.use('/api', api)
+app.use('/api/course', courseRoutes)
 
 //Invalid Route Error Handler
 app.use(notFound);
