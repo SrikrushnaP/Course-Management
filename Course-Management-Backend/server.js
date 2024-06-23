@@ -27,7 +27,7 @@ app.use(express.json())
 app.use(morgan("common"))
 
 app.get('/', function (req, res) {
-    res.send("Hello from server");
+    res.send("Hello from server, Now our app Deployed in heroku");
 });
 
 app.get('/html-text', function (req, res) {
