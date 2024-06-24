@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,6 +9,15 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
-export class NavComponent {
+export class NavComponent implements OnInit {
 
+  user_service = inject(UserService) // Service inject without constructor
+  isLoggedIn: boolean = false;
+
+  ngOnInit(): void {
+      this.user_service.isLoggedIn$.subscribe(res=>{
+        this.isLoggedIn = this.user_service.isLoggedIn();
+      })
+      console.log("this.isLoggedIn", this.isLoggedIn)
+  }
 }

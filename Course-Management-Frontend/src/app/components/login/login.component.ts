@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
         //response
         console.log(res);
         localStorage.setItem('token', res.token);
+        this.user_service.isLoggedIn$.next(true);
         this.router.navigate(['/list-course']);
       },
       error: (error) => {
