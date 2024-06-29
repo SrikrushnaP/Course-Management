@@ -28,7 +28,11 @@ export class UserService {
   }
 
   isLoggedIn(){
-    return !!localStorage.getItem("token")
+    if (typeof window !== 'undefined') {
+      return !!localStorage.getItem("token")
+    } else {
+      return false;
+    }
   }
 
 }
