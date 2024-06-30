@@ -26,10 +26,10 @@ router.get('/:id', verifyToken, asyncHandler(async (req, res) => {
 router.post('/add', verifyToken, asyncHandler(async (req, res) => {
 
   const course = new Course({
-    name: req.body.name,
-    link: req.body.link,
+    courseTitle: req.body.courseTitle,
     platform: req.body.platform,
-    description: req.body.description,
+    courseDescription: req.body.courseDescription,
+    courseLink: req.body.courseLink,
     isCompleted: req.body.isCompleted
   });
   const createdCourse = await course.save();

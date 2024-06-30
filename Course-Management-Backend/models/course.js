@@ -3,12 +3,12 @@ const uniqueValidator = require('mongoose-unique-validator')
 
 const Schema = mongoose.Schema
 const courseSchema = new Schema({
-  name: {
+  courseTitle: {
     type: String,
     required: true,
     unique: true
   },
-  link: {
+  courseLink: {
     type: String,
     required: true,
     unique: true
@@ -17,7 +17,7 @@ const courseSchema = new Schema({
     type: String,
     required: true
   },
-  description: {
+  courseDescription: {
     type: String,
     required: true,
     unique: true
