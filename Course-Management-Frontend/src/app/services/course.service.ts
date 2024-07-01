@@ -28,7 +28,7 @@ export class CourseService {
     );
   }
 
-  // deleteCourse(id: number) {
-  //   return this.http.delete(`${this.baseURL}/api/course/delete/${id}`);
-  // }
+  deleteCourse(id: number) {
+    return this.http.delete(`${this.baseURL}/api/course/delete/${id}`);
+  }
 }

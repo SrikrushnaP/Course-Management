@@ -18,6 +18,5 @@ export class NavComponent implements OnInit {
       this.user_service.isLoggedIn$.subscribe(res=>{
         this.isLoggedIn = this.user_service.isLoggedIn();
       })
-      console.log("this.isLoggedIn", this.isLoggedIn)
   }
 }

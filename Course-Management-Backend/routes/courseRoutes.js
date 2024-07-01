@@ -72,7 +72,7 @@ router.delete('/delete/:id', asyncHandler(async (req, res) => {
   const course = await Course.findById(req.params.id);
 
   if (course) {
-    await course.remove();
+    await course.deleteOne();
     res.json({ message: "Course Removed Successfully" });
   } else {
     res.status(404);

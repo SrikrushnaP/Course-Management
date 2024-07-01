@@ -37,4 +37,18 @@ export class CourseListComponent implements OnInit{
     this.router.navigate([`/edit-course/${id}`]);
   }
 
+  deleteCourse(id: any) {
+    this.courseService.deleteCourse(id).subscribe({
+      next: (res: any) => {
+        this.fetchCourses();
+      },
+      error: (error) => {
+        console.log(error);
+      },
+      complete: () => {
+        // console.log('Request complete');
+      },
+    });
+  }
+
 }
