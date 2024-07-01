@@ -24,7 +24,7 @@
             <td><a href="#/getting-started-with-angular" target="_blank">{{course.courseLink}}</a></td>
             <td>{{course.platform}}</td>
             <td><fa-icon [icon]="faTrash" style="color: red; cursor: pointer;"></fa-icon></td>
-            <td><fa-icon [icon]="faPenToSquare" style="color: blue; cursor: pointer;"></fa-icon></td>
+            <td><fa-icon (click)="editCourse(course._id)" [icon]="faPenToSquare" style="color: blue; cursor: pointer;"></fa-icon></td>
           </tr>
         }
       </tbody>

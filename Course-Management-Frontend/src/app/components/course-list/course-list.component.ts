@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faTrash,faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { CourseService } from '../../services/course.service';
@@ -17,7 +17,7 @@ export class CourseListComponent implements OnInit{
 
   courses: any;
 
-  constructor(private courseService: CourseService) {}
+  constructor(private courseService: CourseService, private router: Router) {}
 
   ngOnInit() {
     this.fetchCourses();
@@ -31,6 +31,10 @@ export class CourseListComponent implements OnInit{
       },
       error: (err) => console.log(err)
     });
+  }
+
+  editCourse(id: any) {
+    this.router.navigate([`/edit-course/${id}`]);
   }
 
 }

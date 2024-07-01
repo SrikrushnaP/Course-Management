@@ -40,20 +40,20 @@ router.post('/add', verifyToken, asyncHandler(async (req, res) => {
 router.post('/update/:id', verifyToken, asyncHandler(async (req, res) => {
 
   const {
-    name,
-    link,
+    courseTitle,
     platform,
-    description,
+    courseDescription,
+    courseLink,
     isCompleted
   } = req.body;
 
   const course = await Course.findById(req.params.id);
 
   if (course) {
-    course.name = name;
-    course.link = link;
+    course.courseTitle = courseTitle;
     course.platform = platform;
-    course.description = description;
+    course.courseDescription = courseDescription;
+    course.courseLink = courseLink;
     course.isCompleted = isCompleted;
 
     const updatedCourse = await course.save();
