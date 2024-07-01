@@ -3,6 +3,7 @@ import { RouterLink, Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faTrash,faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { CourseService } from '../../services/course.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-course-list',
@@ -17,7 +18,7 @@ export class CourseListComponent implements OnInit{
 
   courses: any;
 
-  constructor(private courseService: CourseService, private router: Router) {}
+  constructor(private courseService: CourseService, private router: Router, private toastr: ToastrService) {}
 
   ngOnInit() {
     this.fetchCourses();
@@ -46,7 +47,7 @@ export class CourseListComponent implements OnInit{
         console.log(error);
       },
       complete: () => {
-        // console.log('Request complete');
+        this.toastr.info("Course deleted successfully")
       },
     });
   }

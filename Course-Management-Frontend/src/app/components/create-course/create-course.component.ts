@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router} from '@angular/router';
 import { CourseService } from '../../services/course.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-create-course',
@@ -13,7 +14,7 @@ import { CourseService } from '../../services/course.service';
 export class CreateCourseComponent implements OnInit {
   createForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private courseService: CourseService) {
+  constructor(private formBuilder: FormBuilder, private router: Router, private courseService: CourseService, private toastr: ToastrService) {
     this.createForm = this.formBuilder.group({
       courseTitle: ['', Validators.required],
       platform: ['', Validators.required],
@@ -31,7 +32,7 @@ export class CreateCourseComponent implements OnInit {
       next: (res: any) => {
         //response
         this.router.navigate(['/list-course']);
-        alert(`The course details has been successfully saved to the database.`)
+        this.toastr.success(`The course details has been successfully saved to the database.`, 'New course added')
       },
       error: (error:any) => {
         // handle error
