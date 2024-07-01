@@ -17,26 +17,16 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>The Angular Masterclass</td>
-          <td>
-            Completed </td>
-          <td><a href="#/getting-started-with-angular" target="_blank">getting-started-with-angular</a></td>
-          <td>Lerning Srikrushna</td>
-          <td><fa-icon [icon]="faTrash" style="color: red; cursor: pointer;"></fa-icon></td>
-          <td><fa-icon [icon]="faPenToSquare" style="color: blue; cursor: pointer;"></fa-icon></td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td>A Hands-on Guide to Angular</td>
-          <td> Completed</td>
-          <td><a href="#/a-hands-on-guide-to-angular" target="_blank">
-              a-hands-on-guide-to-angular </a></td>
-          <td>Lerning Srikrushna</td>
-          <td><fa-icon [icon]="faTrash" style="color: red; cursor: pointer;"></fa-icon></td>
-          <td><fa-icon [icon]="faPenToSquare" style="color: blue; cursor: pointer;"></fa-icon></td>
-        </tr>
+        @for (course of courses; track $index) {
+          <tr>
+            <td>{{course.courseTitle}}</td>
+            <td>{{course.isCompleted}} </td>
+            <td><a href="#/getting-started-with-angular" target="_blank">{{course.courseLink}}</a></td>
+            <td>{{course.platform}}</td>
+            <td><fa-icon [icon]="faTrash" style="color: red; cursor: pointer;"></fa-icon></td>
+            <td><fa-icon [icon]="faPenToSquare" style="color: blue; cursor: pointer;"></fa-icon></td>
+          </tr>
+        }
       </tbody>
     </table>
   </div>

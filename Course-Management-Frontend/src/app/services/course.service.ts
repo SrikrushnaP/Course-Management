@@ -9,7 +9,12 @@ export class CourseService {
 
   constructor(private http: HttpClient) { }
 
+  getCourses() {
+    return this.http.get(`${this.baseURL}/api/course`);
+  }
+
   addCourse(courseInfo: any) {
     return this.http.post(`${this.baseURL}/api/course/add`, courseInfo);
   }
+
 }
